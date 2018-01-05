@@ -1630,13 +1630,1766 @@ const natDex =`National Dex
 802: Marshadow`.split(`
 `)
 
-const sortbyAlphabet =``
+
+const sortbyAlphabet =`
+Abomasnow
+Abra
+Absol
+Accelgor
+Aegislash
+Aerodactyl
+Aggron
+Aipom
+Alakazam
+Alomomola
+Altaria
+Amaura
+Ambipom
+Amoonguss
+Ampharos
+Anorith
+Araquanid
+Arbok
+Arcanine
+Arceus
+Archen
+Archeops
+Ariados
+Armaldo
+Aromatisse
+Aron
+Articuno
+Audino
+Aurorus
+Avalugg
+Axew
+Azelf
+Azumarill
+Azurill
+Bagon
+Baltoy
+Banette
+Barbaracle
+Barboach
+Basculin
+Bastiodon
+Bayleef
+Beartic
+Beautifly
+Beedrill
+Beheeyem
+Beldum
+Bellossom
+Bellsprout
+Bergmite
+Bewear
+Bibarel
+Bidoof
+Binacle
+Bisharp
+Blastoise
+Blaziken
+Blissey
+Blitzle
+Boldore
+Bonsly
+Bouffalant
+Bounsweet
+Braixen
+Braviary
+Breloom
+Brionne
+Bronzong
+Bronzor
+Bruxish
+Budew
+Buizel
+Bulbasaur
+Buneary
+Bunnelby
+Burmy
+Butterfree
+Buzzwole
+Cacnea
+Cacturne
+Camerupt
+Carbink
+Carnivine
+Carracosta
+Carvanha
+Cascoon
+Castform
+Caterpie
+Celebi
+Celesteela
+Chandelure
+Chansey
+Charizard
+Charjabug
+Charmander
+Charmeleon
+Chatot
+Cherrim
+Cherubi
+Chesnaught
+Chespin
+Chikorita
+Chimchar
+Chimecho
+Chinchou
+Chingling
+Cinccino
+Clamperl
+Clauncher
+Clawitzer
+Claydol
+Clefable
+Clefairy
+Cleffa
+Cloyster
+Cobalion
+Cofagrigus
+Combee
+Combusken
+Comfey
+Conkeldurr
+Corphish
+Corsola
+Cosmoem
+Cosmog
+Cottonee
+Crabominable
+Crabrawler
+Cradily
+Cranidos
+Crawdaunt
+Cresselia
+Croagunk
+Crobat
+Croconaw
+Crustle
+Cryogonal
+Cubchoo
+Cubone
+Cutiefly
+Cyndaquil
+Darkrai
+Darmanitan
+Dartrix
+Darumaka
+Decidueye
+Dedenne
+Deerling
+Deino
+Delcatty
+Delibird
+Delphox
+Deoxys
+Dewgong
+Dewott
+Dewpider
+Dhelmise
+Dialga
+Diancie
+Diggersby
+Diglett
+Ditto
+Dodrio
+Doduo
+Donphan
+Doublade
+Dragalge
+Dragonair
+Dragonite
+Drampa
+Drapion
+Dratini
+Drifblim
+Drifloon
+Drilbur
+Drowzee
+Druddigon
+Ducklett
+Dugtrio
+Dunsparce
+Duosion
+Durant
+Dusclops
+Dusknoir
+Duskull
+Dustox
+Dwebble
+Eelektrik
+Eelektross
+Eevee
+Ekans
+Electabuzz
+Electivire
+Electrike
+Electrode
+Elekid
+Elgyem
+Emboar
+Emolga
+Empoleon
+Entei
+Escavalier
+Espeon
+Espurr
+Excadrill
+Exeggcute
+Exeggutor
+Exploud
+Farfetch’d
+Fearow
+Feebas
+Fennekin
+Feraligatr
+Ferroseed
+Ferrothorn
+Finneon
+Flaaffy
+Flabébé
+Flareon
+Fletchinder
+Fletchling
+Floatzel
+Floette
+Florges
+Flygon
+Fomantis
+Foongus
+Forretress
+Fraxure
+Frillish
+Froakie
+Frogadier
+Froslass
+Furfrou
+Furret
+Gabite
+Gallade
+Galvantula
+Garbodor
+Garchomp
+Gardevoir
+Gastly
+Gastrodon
+Genesect
+Gengar
+Geodude
+Gible
+Gigalith
+Girafarig
+Giratina
+Glaceon
+Glalie
+Glameow
+Gligar
+Gliscor
+Gloom
+Gogoat
+Golbat
+Goldeen
+Golduck
+Golem
+Golett
+Golisopod
+Golurk
+Goodra
+Goomy
+Gorebyss
+Gothita
+Gothitelle
+Gothorita
+Gourgeist
+Granbull
+Graveler
+Greninja
+Grimer
+Grotle
+Groudon
+Grovyle
+Growlithe
+Grubbin
+Grumpig
+Gulpin
+Gumshoos
+Gurdurr
+Guzzlord
+Gyarados
+Hakamo-o
+Happiny
+Hariyama
+Haunter
+Hawlucha
+Haxorus
+Heatmor
+Heatran
+Heliolisk
+Helioptile
+Heracross
+Herdier
+Hippopotas
+Hippowdon
+Hitmonchan
+Hitmonlee
+Hitmontop
+Ho-Oh
+Honchkrow
+Honedge
+Hoopa
+Hoothoot
+Hoppip
+Horsea
+Houndoom
+Houndour
+Huntail
+Hydreigon
+Hypno
+Igglybuff
+Illumise
+Incineroar
+Infernape
+Inkay
+Ivysaur
+Jangmo-o
+Jellicent
+Jigglypuff
+Jirachi
+Jolteon
+Joltik
+Jumpluff
+Jynx
+Kabuto
+Kabutops
+Kadabra
+Kakuna
+Kangaskhan
+Karrablast
+Kartana
+Kecleon
+Keldeo
+Kingdra
+Kingler
+Kirlia
+Klang
+Klefki
+Klink
+Klinklang
+Koffing
+Komala
+Kommo-o
+Krabby
+Kricketot
+Kricketune
+Krokorok
+Krookodile
+Kyogre
+Kyurem
+Lairon
+Lampent
+Landorus
+Lanturn
+Lapras
+Larvesta
+Larvitar
+Latias
+Latios
+Leafeon
+Leavanny
+Ledian
+Ledyba
+Lickilicky
+Lickitung
+Liepard
+Lileep
+Lilligant
+Lillipup
+Linoone
+Litleo
+Litten
+Litwick
+Lombre
+Lopunny
+Lotad
+Loudred
+Lucario
+Ludicolo
+Lugia
+Lumineon
+Lunala
+Lunatone
+Lurantis
+Luvdisc
+Luxio
+Luxray
+Lycanroc
+Machamp
+Machoke
+Machop
+Magby
+Magcargo
+Magearna
+Magikarp
+Magmar
+Magmortar
+Magnemite
+Magneton
+Magnezone
+Makuhita
+Malamar
+Mamoswine
+Manaphy
+Mandibuzz
+Manectric
+Mankey
+Mantine
+Mantyke
+Maractus
+Mareanie
+Mareep
+Marill
+Marowak
+Marshadow
+Marshtomp
+Masquerain
+Mawile
+Medicham
+Meditite
+Meganium
+Meloetta
+Meowstic
+Meowth
+Mesprit
+Metagross
+Metang
+Metapod
+Mew
+Mewtwo
+Mienfoo
+Mienshao
+Mightyena
+Milotic
+Miltank
+Mime Jr.
+Mimikyu
+Minccino
+Minior
+Minun
+Misdreavus
+Mismagius
+Moltres
+Monferno
+Morelull
+Mothim
+Mr. Mime
+Mudbray
+Mudkip
+Mudsdale
+Muk
+Munchlax
+Munna
+Murkrow
+Musharna
+Natu
+Necrozma
+Nidoking
+Nidoqueen
+Nidoran♀
+Nidoran♂
+Nidorina
+Nidorino
+Nihilego
+Nincada
+Ninetales
+Ninjask
+Noctowl
+Noibat
+Noivern
+Nosepass
+Numel
+Nuzleaf
+Octillery
+Oddish
+Omanyte
+Omastar
+Onix
+Oranguru
+Oricorio
+Oshawott
+Pachirisu
+Palkia
+Palossand
+Palpitoad
+Pancham
+Pangoro
+Panpour
+Pansage
+Pansear
+Paras
+Parasect
+Passimian
+Patrat
+Pawniard
+Pelipper
+Persian
+Petilil
+Phanpy
+Phantump
+Pheromosa
+Phione
+Pichu
+Pidgeot
+Pidgeotto
+Pidgey
+Pidove
+Pignite
+Pikachu
+Pikipek
+Piloswine
+Pineco
+Pinsir
+Piplup
+Plusle
+Politoed
+Poliwag
+Poliwhirl
+Poliwrath
+Ponyta
+Poochyena
+Popplio
+Porygon
+Porygon-Z
+Porygon2
+Primarina
+Primeape
+Prinplup
+Probopass
+Psyduck
+Pumpkaboo
+Pupitar
+Purrloin
+Purugly
+Pyroar
+Pyukumuku
+Quagsire
+Quilava
+Quilladin
+Qwilfish
+Raichu
+Raikou
+Ralts
+Rampardos
+Rapidash
+Raticate
+Rattata
+Rayquaza
+Regice
+Regigigas
+Regirock
+Registeel
+Relicanth
+Remoraid
+Reshiram
+Reuniclus
+Rhydon
+Rhyhorn
+Rhyperior
+Ribombee
+Riolu
+Rockruff
+Roggenrola
+Roselia
+Roserade
+Rotom
+Rowlet
+Rufflet
+Sableye
+Salamence
+Salandit
+Salazzle
+Samurott
+Sandile
+Sandshrew
+Sandslash
+Sandygast
+Sawk
+Sawsbuck
+Scatterbug
+Sceptile
+Scizor
+Scolipede
+Scrafty
+Scraggy
+Scyther
+Seadra
+Seaking
+Sealeo
+Seedot
+Seel
+Seismitoad
+Sentret
+Serperior
+Servine
+Seviper
+Sewaddle
+Sharpedo
+Shaymin
+Shedinja
+Shelgon
+Shellder
+Shellos
+Shelmet
+Shieldon
+Shiftry
+Shiinotic
+Shinx
+Shroomish
+Shuckle
+Shuppet
+Sigilyph
+Silcoon
+Silvally
+Simipour
+Simisage
+Simisear
+Skarmory
+Skiddo
+Skiploom
+Skitty
+Skorupi
+Skrelp
+Skuntank
+Slaking
+Slakoth
+Sliggoo
+Slowbro
+Slowking
+Slowpoke
+Slugma
+Slurpuff
+Smeargle
+Smoochum
+Sneasel
+Snivy
+Snorlax
+Snorunt
+Snover
+Snubbull
+Solgaleo
+Solosis
+Solrock
+Spearow
+Spewpa
+Spheal
+Spinarak
+Spinda
+Spiritomb
+Spoink
+Spritzee
+Squirtle
+Stantler
+Staraptor
+Staravia
+Starly
+Starmie
+Staryu
+Steelix
+Steenee
+Stoutland
+Stufful
+Stunfisk
+Stunky
+Sudowoodo
+Suicune
+Sunflora
+Sunkern
+Surskit
+Swablu
+Swadloon
+Swalot
+Swampert
+Swanna
+Swellow
+Swinub
+Swirlix
+Swoobat
+Sylveon
+Taillow
+Talonflame
+Tangela
+Tangrowth
+Tapu Bulu
+Tapu Fini
+Tapu Koko
+Tapu Lele
+Tauros
+Teddiursa
+Tentacool
+Tentacruel
+Tepig
+Terrakion
+Throh
+Thundurus
+Timburr
+Tirtouga
+Togedemaru
+Togekiss
+Togepi
+Togetic
+Torchic
+Torkoal
+Tornadus
+Torracat
+Torterra
+Totodile
+Toucannon
+Toxapex
+Toxicroak
+Tranquill
+Trapinch
+Treecko
+Trevenant
+Tropius
+Trubbish
+Trumbeak
+Tsareena
+Turtonator
+Turtwig
+Tympole
+Tynamo
+Type: Null
+Typhlosion
+Tyranitar
+Tyrantrum
+Tyrogue
+Tyrunt
+Umbreon
+Unfezant
+Unown
+Ursaring
+Uxie
+Vanillish
+Vanillite
+Vanilluxe
+Vaporeon
+Venipede
+Venomoth
+Venonat
+Venusaur
+Vespiquen
+Vibrava
+Victini
+Victreebel
+Vigoroth
+Vikavolt
+Vileplume
+Virizion
+Vivillon
+Volbeat
+Volcanion
+Volcarona
+Voltorb
+Vullaby
+Vulpix
+Wailmer
+Wailord
+Walrein
+Wartortle
+Watchog
+Weavile
+Weedle
+Weepinbell
+Weezing
+Whimsicott
+Whirlipede
+Whiscash
+Whismur
+Wigglytuff
+Wimpod
+Wingull
+Wishiwashi
+Wobbuffet
+Woobat
+Wooper
+Wormadam
+Wurmple
+Wynaut
+Xatu
+Xerneas
+Xurkitree
+Yamask
+Yanma
+Yanmega
+Yungoos
+Yveltal
+Zangoose
+Zapdos
+Zebstrika
+Zekrom
+Zigzagoon
+Zoroark
+Zorua
+Zubat
+Zweilous
+Zygarde`.split(`
+`)
+
+const pokeAtt = `
+10,000,000 Volt Thunderbolt
+Absorb
+Accelerock
+Acid
+Acid Armor
+Acid Downpour
+Acid Spray
+Acrobatics
+Acupressure
+Aerial Ace
+Aeroblast
+After You
+Agility
+Air Cutter
+Air Slash
+All-Out Pummeling
+Ally Switch
+Amnesia
+Anchor Shot
+Ancient Power
+Aqua Jet
+Aqua Ring
+Aqua Tail
+Arm Thrust
+Aromatherapy
+Aromatic Mist
+Assist
+Assurance
+Astonish
+Attack Order
+Attract
+Aura Sphere
+Aurora Beam
+Aurora Veil
+Autotomize
+Avalanche
+Baby-Doll Eyes
+Baneful Bunker
+Barrage
+Barrier
+Baton Pass
+Beak Blast
+Beat Up
+Belch
+Belly Drum
+Bestow
+Bide
+Bind
+Bite
+Black Hole Eclipse
+Blast Burn
+Blaze Kick
+Blizzard
+Block
+Bloom Doom
+Blue Flare
+Body Slam
+Bolt Strike
+Bone Club
+Bone Rush
+Bonemerang
+Boomburst
+Bounce
+Brave Bird
+Breakneck Blitz
+Brick Break
+Brine
+Brutal Swing
+Bubble
+Bubble Beam
+Bug Bite
+Bug Buzz
+Bulk Up
+Bulldoze
+Bullet Punch
+Bullet Seed
+Burn Up
+Calm Mind
+Camouflage
+Captivate
+Catastropika
+Celebrate
+Charge
+Charge Beam
+Charm
+Chatter
+Chip Away
+Circle Throw
+Clamp
+Clanging Scales
+Clangorous Soulblaze
+Clear Smog
+Close Combat
+Coil
+Comet Punch
+Confide
+Confuse Ray
+Confusion
+Constrict
+Continental Crush
+Conversion
+Conversion 2
+Copycat
+Core Enforcer
+Corkscrew Crash
+Cosmic Power
+Cotton Guard
+Cotton Spore
+Counter
+Covet
+Crabhammer
+Crafty Shield
+Cross Chop
+Cross Poison
+Crunch
+Crush Claw
+Crush Grip
+Curse
+Cut
+Dark Pulse
+Dark Void
+Darkest Lariat
+Dazzling Gleam
+Defend Order
+Defense Curl
+Defog
+Destiny Bond
+Detect
+Devastating Drake
+Diamond Storm
+Dig
+Disable
+Disarming Voice
+Discharge
+Dive
+Dizzy Punch
+Doom Desire
+Double Hit
+Double Kick
+Double Slap
+Double Team
+Double-Edge
+Draco Meteor
+Dragon Ascent
+Dragon Breath
+Dragon Claw
+Dragon Dance
+Dragon Hammer
+Dragon Pulse
+Dragon Rage
+Dragon Rush
+Dragon Tail
+Drain Punch
+Draining Kiss
+Dream Eater
+Drill Peck
+Drill Run
+Dual Chop
+Dynamic Punch
+Earth Power
+Earthquake
+Echoed Voice
+Eerie Impulse
+Egg Bomb
+Electric Terrain
+Electrify
+Electro Ball
+Electroweb
+Embargo
+Ember
+Encore
+Endeavor
+Endure
+Energy Ball
+Entrainment
+Eruption
+Explosion
+Extrasensory
+Extreme Evoboost
+Extreme Speed
+Facade
+Fairy Lock
+Fairy Wind
+Fake Out
+Fake Tears
+False Swipe
+Feather Dance
+Feint
+Feint Attack
+Fell Stinger
+Fiery Dance
+Final Gambit
+Fire Blast
+Fire Fang
+Fire Lash
+Fire Pledge
+Fire Punch
+Fire Spin
+First Impression
+Fissure
+Flail
+Flame Burst
+Flame Charge
+Flame Wheel
+Flamethrower
+Flare Blitz
+Flash
+Flash Cannon
+Flatter
+Fleur Cannon
+Fling
+Floral Healing
+Flower Shield
+Fly
+Flying Press
+Focus Blast
+Focus Energy
+Focus Punch
+Follow Me
+Force Palm
+Foresight
+Forest's Curse
+Foul Play
+Freeze Shock
+Freeze-Dry
+Frenzy Plant
+Frost Breath
+Frustration
+Fury Attack
+Fury Cutter
+Fury Swipes
+Fusion Bolt
+Fusion Flare
+Future Sight
+Gastro Acid
+Gear Grind
+Gear Up
+Genesis Supernova
+Geomancy
+Giga Drain
+Giga Impact
+Gigavolt Havoc
+Glaciate
+Glare
+Grass Knot
+Grass Pledge
+Grass Whistle
+Grassy Terrain
+Gravity
+Growl
+Growth
+Grudge
+Guard Split
+Guard Swap
+Guardian of Alola
+Guillotine
+Gunk Shot
+Gust
+Gyro Ball
+Hail
+Hammer Arm
+Happy Hour
+Harden
+Haze
+Head Charge
+Head Smash
+Headbutt
+Heal Bell
+Heal Block
+Heal Order
+Heal Pulse
+Healing Wish
+Heart Stamp
+Heart Swap
+Heat Crash
+Heat Wave
+Heavy Slam
+Helping Hand
+Hex
+Hidden Power
+High Horsepower
+High Jump Kick
+Hold Back
+Hold Hands
+Hone Claws
+Horn Attack
+Horn Drill
+Horn Leech
+Howl
+Hurricane
+Hydro Cannon
+Hydro Pump
+Hydro Vortex
+Hyper Beam
+Hyper Fang
+Hyper Voice
+Hyperspace Fury
+Hyperspace Hole
+Hypnosis
+Ice Ball
+Ice Beam
+Ice Burn
+Ice Fang
+Ice Hammer
+Ice Punch
+Ice Shard
+Icicle Crash
+Icicle Spear
+Icy Wind
+Imprison
+Incinerate
+Inferno
+Inferno Overdrive
+Infestation
+Ingrain
+Instruct
+Ion Deluge
+Iron Defense
+Iron Head
+Iron Tail
+Judgment
+Jump Kick
+Karate Chop
+Kinesis
+King's Shield
+Knock Off
+Land's Wrath
+Laser Focus
+Last Resort
+Lava Plume
+Leaf Blade
+Leaf Storm
+Leaf Tornado
+Leafage
+Leech Life
+Leech Seed
+Leer
+Let's Snuggle Forever
+Lick
+Light of Ruin
+Light Screen
+Light That Burns the Sky
+Liquidation
+Lock-On
+Lovely Kiss
+Low Kick
+Low Sweep
+Lucky Chant
+Lunar Dance
+Lunge
+Luster Purge
+Mach Punch
+Magic Coat
+Magic Room
+Magical Leaf
+Magma Storm
+Magnet Bomb
+Magnet Rise
+Magnetic Flux
+Magnitude
+Malicious Moonsault
+Mat Block
+Me First
+Mean Look
+Meditate
+Mega Drain
+Mega Kick
+Mega Punch
+Megahorn
+Memento
+Menacing Moonraze Maelstrom
+Metal Burst
+Metal Claw
+Metal Sound
+Meteor Mash
+Metronome
+Milk Drink
+Mimic
+Mind Blown
+Mind Reader
+Minimize
+Miracle Eye
+Mirror Coat
+Mirror Move
+Mirror Shot
+Mist
+Mist Ball
+Misty Terrain
+Moonblast
+Moongeist Beam
+Moonlight
+Morning Sun
+Mud Bomb
+Mud Shot
+Mud Sport
+Mud-Slap
+Muddy Water
+Multi-Attack
+Mystical Fire
+Nasty Plot
+Natural Gift
+Nature Power
+Nature's Madness
+Needle Arm
+Never-Ending Nightmare
+Night Daze
+Night Shade
+Night Slash
+Nightmare
+Noble Roar
+Nuzzle
+Oblivion Wing
+Oceanic Operetta
+Octazooka
+Odor Sleuth
+Ominous Wind
+Origin Pulse
+Outrage
+Overheat
+Pain Split
+Parabolic Charge
+Parting Shot
+Pay Day
+Payback
+Peck
+Perish Song
+Petal Blizzard
+Petal Dance
+Phantom Force
+Photon Geyser
+Pin Missile
+Plasma Fists
+Play Nice
+Play Rough
+Pluck
+Poison Fang
+Poison Gas
+Poison Jab
+Poison Powder
+Poison Sting
+Poison Tail
+Pollen Puff
+Pound
+Powder
+Powder Snow
+Power Gem
+Power Split
+Power Swap
+Power Trick
+Power Trip
+Power Whip
+Power-Up Punch
+Precipice Blades
+Present
+Prismatic Laser
+Protect
+Psybeam
+Psych Up
+Psychic
+Psychic Fangs
+Psychic Terrain
+Psycho Boost
+Psycho Cut
+Psycho Shift
+Psyshock
+Psystrike
+Psywave
+Pulverizing Pancake
+Punishment
+Purify
+Pursuit
+Quash
+Quick Attack
+Quick Guard
+Quiver Dance
+Rage
+Rage Powder
+Rain Dance
+Rapid Spin
+Razor Leaf
+Razor Shell
+Razor Wind
+Recover
+Recycle
+Reflect
+Reflect Type
+Refresh
+Relic Song
+Rest
+Retaliate
+Return
+Revelation Dance
+Revenge
+Reversal
+Roar
+Roar of Time
+Rock Blast
+Rock Climb
+Rock Polish
+Rock Slide
+Rock Smash
+Rock Throw
+Rock Tomb
+Rock Wrecker
+Role Play
+Rolling Kick
+Rollout
+Roost
+Rototiller
+Round
+Sacred Fire
+Sacred Sword
+Safeguard
+Sand Attack
+Sand Tomb
+Sandstorm
+Savage Spin-Out
+Scald
+Scary Face
+Scratch
+Screech
+Searing Shot
+Searing Sunraze Smash
+Secret Power
+Secret Sword
+Seed Bomb
+Seed Flare
+Seismic Toss
+Self-Destruct
+Shadow Ball
+Shadow Bone
+Shadow Claw
+Shadow Force
+Shadow Punch
+Shadow Sneak
+Sharpen
+Shattered Psyche
+Sheer Cold
+Shell Smash
+Shell Trap
+Shift Gear
+Shock Wave
+Shore Up
+Signal Beam
+Silver Wind
+Simple Beam
+Sing
+Sinister Arrow Raid
+Sketch
+Skill Swap
+Skull Bash
+Sky Attack
+Sky Drop
+Sky Uppercut
+Slack Off
+Slam
+Slash
+Sleep Powder
+Sleep Talk
+Sludge
+Sludge Bomb
+Sludge Wave
+Smack Down
+Smart Strike
+Smelling Salts
+Smog
+Smokescreen
+Snarl
+Snatch
+Snore
+Soak
+Soft-Boiled
+Solar Beam
+Solar Blade
+Sonic Boom
+Soul-Stealing 7-Star Strike
+Spacial Rend
+Spark
+Sparkling Aria
+Spectral Thief
+Speed Swap
+Spider Web
+Spike Cannon
+Spikes
+Spiky Shield
+Spirit Shackle
+Spit Up
+Spite
+Splash
+Splintered Stormshards
+Spore
+Spotlight
+Stealth Rock
+Steam Eruption
+Steamroller
+Steel Wing
+Sticky Web
+Stockpile
+Stoked Sparksurfer
+Stomp
+Stomping Tantrum
+Stone Edge
+Stored Power
+Storm Throw
+Strength
+Strength Sap
+String Shot
+Struggle
+Struggle Bug
+Stun Spore
+Submission
+Substitute
+Subzero Slammer
+Sucker Punch
+Sunny Day
+Sunsteel Strike
+Super Fang
+Superpower
+Supersonic
+Supersonic Skystrike
+Surf
+Swagger
+Swallow
+Sweet Kiss
+Sweet Scent
+Swift
+Switcheroo
+Swords Dance
+Synchronoise
+Synthesis
+Tackle
+Tail Glow
+Tail Slap
+Tail Whip
+Tailwind
+Take Down
+Taunt
+Tearful Look
+Techno Blast
+Tectonic Rage
+Teeter Dance
+Telekinesis
+Teleport
+Thief
+Thousand Arrows
+Thousand Waves
+Thrash
+Throat Chop
+Thunder
+Thunder Fang
+Thunder Punch
+Thunder Shock
+Thunder Wave
+Thunderbolt
+Tickle
+Topsy-Turvy
+Torment
+Toxic
+Toxic Spikes
+Toxic Thread
+Transform
+Tri Attack
+Trick
+Trick Room
+Trick-or-Treat
+Triple Kick
+Trop Kick
+Trump Card
+Twineedle
+Twinkle Tackle
+Twister
+U-turn
+Uproar
+V-create
+Vacuum Wave
+Venom Drench
+Venoshock
+Vice Grip
+Vine Whip
+Vital Throw
+Volt Switch
+Volt Tackle
+Wake-Up Slap
+Water Gun
+Water Pledge
+Water Pulse
+Water Shuriken
+Water Sport
+Water Spout
+Waterfall
+Weather Ball
+Whirlpool
+Whirlwind
+Wide Guard
+Wild Charge
+Will-O-Wisp
+Wing Attack
+Wish
+Withdraw
+Wonder Room
+Wood Hammer
+Work Up
+Worry Seed
+Wrap
+Wring Out
+X-Scissor
+Yawn
+Zap Cannon
+Zen Headbutt
+Zing Zap`.split(`
+`)
+
+const pokeAbil = `
+Adaptability
+Aerilate
+Aftermath
+Air Lock
+Analytic
+Anger Point
+Anticipation
+Arena Trap
+Aroma Veil
+Aura Break
+Bad Dreams
+Battery
+Battle Armor
+Battle Bond
+Beast Boost
+Berserk
+Big Pecks
+Blaze
+Bulletproof
+Cheek Pouch
+Chlorophyll
+Clear Body
+Cloud Nine
+Color Change
+Comatose
+Competitive
+Compound Eyes
+Contrary
+Corrosion
+Cursed Body
+Cute Charm
+Damp
+Dancer
+Dark Aura
+Dazzling
+Defeatist
+Defiant
+Delta Stream
+Desolate Land
+Disguise
+Download
+Drizzle
+Drought
+Dry Skin
+Early Bird
+Effect Spore
+Electric Surge
+Emergency Exit
+Fairy Aura
+Filter
+Flame Body
+Flare Boost
+Flash Fire
+Flower Gift
+Flower Veil
+Fluffy
+Forecast
+Forewarn
+Friend Guard
+Frisk
+Full Metal Body
+Fur Coat
+Gale Wings
+Galvanize
+Gluttony
+Gooey
+Grass Pelt
+Grassy Surge
+Guts
+Harvest
+Healer
+Heatproof
+Heavy Metal
+Honey Gather
+Huge Power
+Hustle
+Hydration
+Hyper Cutter
+Ice Body
+Illuminate
+Illusion
+Immunity
+Imposter
+Infiltrator
+Innards Out
+Inner Focus
+Insomnia
+Intimidate
+Iron Barbs
+Iron Fist
+Justified
+Keen Eye
+Klutz
+Leaf Guard
+Levitate
+Light Metal
+Lightning Rod
+Limber
+Liquid Ooze
+Liquid Voice
+Long Reach
+Magic Bounce
+Magic Guard
+Magician
+Magma Armor
+Magnet Pull
+Marvel Scale
+Mega Launcher
+Merciless
+Minus
+Misty Surge
+Mold Breaker
+Moody
+Motor Drive
+Moxie
+Multiscale
+Multitype
+Mummy
+Natural Cure
+Neuroforce
+No Guard
+Normalize
+Oblivious
+Overcoat
+Overgrow
+Own Tempo
+Parental Bond
+Pickpocket
+Pickup
+Pixilate
+Plus
+Poison Heal
+Poison Point
+Poison Touch
+Power Construct
+Power of Alchemy
+Prankster
+Pressure
+Primordial Sea
+Prism Armor
+Protean
+Psychic Surge
+Pure Power
+Queenly Majesty
+Quick Feet
+Rain Dish
+Rattled
+Receiver
+Reckless
+Refrigerate
+Regenerator
+Rivalry
+RKS System
+Rock Head
+Rough Skin
+Run Away
+Sand Force
+Sand Rush
+Sand Stream
+Sand Veil
+Sap Sipper
+Schooling
+Scrappy
+Serene Grace
+Shadow Shield
+Shadow Tag
+Shed Skin
+Sheer Force
+Shell Armor
+Shield Dust
+Shields Down
+Simple
+Skill Link
+Slow Start
+Slush Rush
+Sniper
+Snow Cloak
+Snow Warning
+Solar Power
+Solid Rock
+Soul-Heart
+Soundproof
+Speed Boost
+Stakeout
+Stall
+Stamina
+Stance Change
+Static
+Steadfast
+Steelworker
+Stench
+Sticky Hold
+Storm Drain
+Strong Jaw
+Sturdy
+Suction Cups
+Super Luck
+Surge Surfer
+Swarm
+Sweet Veil
+Swift Swim
+Symbiosis
+Synchronize
+Tangled Feet
+Tangling Hair
+Technician
+Telepathy
+Teravolt
+Thick Fat
+Tinted Lens
+Torrent
+Tough Claws
+Toxic Boost
+Trace
+Triage
+Truant
+Turboblaze
+Unaware
+Unburden
+Unnerve
+Victory Star
+Vital Spirit
+Volt Absorb
+Water Absorb
+Water Bubble
+Water Compaction
+Water Veil
+Weak Armor
+White Smoke
+Wimp Out
+Wonder Guard
+Wonder Skin
+Zen Mode`.split(`
+`)
 
 // this.list.pus
 console.log(natDex)
 
 this.setState({
-  breeds: pNames
+  breeds: natDex
 })
 }
 
@@ -1747,7 +3500,7 @@ this.setState({
           <select onChange={this.handlerSelectDog}>
             {this.state.breeds.map(el => <option value={el}>{el}</option>)}
           </select>
-          <button onClick={this.getSelectedDog}>This Pokemon!</button>
+          <button onClick={this.getSelectedDog}>This Pokemon!</button> <button>List National Dex</button>
         </div>
         <div>
           <img style={styles.img} alt="" src={imgURL} />
