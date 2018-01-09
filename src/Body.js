@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link, Switch, Route } from "react-router-dom";
 // import Pets from "./Pets/Pets";
+
+// Change here
 import Home from "./Home";
 import Pokemon from "./pokePage"
 const Main = () =>(
