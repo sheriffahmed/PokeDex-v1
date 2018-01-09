@@ -4,6 +4,7 @@ import { Link, Switch, Route } from "react-router-dom";
 
 // Change here
 import Home from "./Home";
+import Pokemon from "./pokePage"
 const Main = () =>(
   <div>
   <nav>
@@ -15,6 +16,7 @@ const Main = () =>(
   </nav>
   <Switch>
 <Route exact path="/" component={Home}/> 
+<Route path="/pokemon" component={Pokemon}/>
   </Switch>
   </div>
 )

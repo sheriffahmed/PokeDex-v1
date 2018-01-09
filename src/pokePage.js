@@ -1,14 +1,23 @@
 import React from 'react';
-import {Link, Switch, Route} from 'react=router-dom';
-
+import {Link, Switch, Route} from 'react-router-dom';
+import PokeLists from "./pokeLists"
+import PokeNameList from "./pokeNameList"
 
 const Pokemon = () => {
-  <div>
-    <Link to='/pokemon/name'>Name</Link>
-    <Link to='/pokemon/number'>Number</Link>
-    <Switch>
-    <Route to='/pokemon/name' />
-    <Route to='/pokemon/number' />
-    </Switch>
+  return(
+  <div style={{paddingTop: '7vh'}}>
+
+  <Link to='/pokemon/name'>Sort by Pokemon Name</Link>
+  {" "}
+  <Link to='/pokemon/number'>Sort by Pokemon Number</Link>
+  <Switch>
+  <Route path='/pokemon/name' render={PokeNameList}/>
+  <Route path='/pokemon/number' />
+  <Route path='/pokemon/:pokemon' />
+  </Switch>
   </div>
+  )
 }
+
+export default Pokemon;
+

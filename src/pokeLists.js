@@ -803,8 +803,7 @@ Magearna
 Marshadow`.split(`
 `)
 
-const natDex = `National Dex
-001: Bulbasaur
+const natDex = `001: Bulbasaur
 002: Ivysaur
 003: Venusaur
 004: Charmander
@@ -3370,4 +3369,7 @@ const pokeNum = () => {
   }
   return directory;
 }
-export default{}
+export default{
+  sortbyAlphabet,
+  natDex
+}

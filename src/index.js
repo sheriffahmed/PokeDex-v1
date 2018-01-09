@@ -17,7 +17,8 @@ class App extends React.Component {
     this.state = {
       imgURL: "",
       selectDog: "",
-      breeds: []
+      breeds: [],
+      searchInput: ''
     }
   }
 
