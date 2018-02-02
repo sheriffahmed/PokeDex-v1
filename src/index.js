@@ -1,8 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
 import Hello from './Hello';
-import {BrowserRouter} from "react-router-dom";
+import { BrowserRouter, Link, Switch, Route} from "react-router-dom";
 import Main from "./Body";
+import Home from './Home'
+import Pokemon from "./pokePage"
 const axios = require("axios");
 
 const styles = {
@@ -119,30 +121,51 @@ class App extends React.Component {
       }
     }
     console.log(this.list)
-    return (
-      <div>
-        <p> PokeDex v1: <i>A casual guide to competitive Battling</i></p>
-        
-        <br />
+
+    return(
+      <BrowserRouter>
         <div>
-        <input type="text" />
-        <button>Search PokeDex</button>
+          <nav>
+            <Link to="/">Home</Link>
+            {"  "}
+            <Link to="/pokemon">Pokemon</Link>
+
+            {"  "}<input type="text" /> <button>Search PokeDex</button>
+          </nav>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/pokemon" component={Pokemon} />
+          </Switch>
         </div>
-        <div>
-          <select onChange={this.handlerSelectDog}>
-            {this.state.breeds.map(el => <option value={el}>{el}</option>)}
-          </select>
-          <button onClick={this.getSelectedDog}>This Pokemon!</button> <button>List National Dex</button>
-        </div>
-        <div>
-          <img style={styles.img} alt="" src={imgURL} />
-        </div>
-        <p>
-          <button onClick={this.getRandomImage}> one more! </button>
-        </p>
-      </div>
+      
+      </BrowserRouter>
+
+      
     )
+    // return (
+    //   <div>
+    //     <p> PokeDex v1: <i>A casual guide to competitive Battling</i></p>
+        
+    //     <br />
+    //     <div>
+    //     <input type="text" />
+    //     <button>Search PokeDex</button>
+    //     </div>
+    //     <div>
+    //       <select onChange={this.handlerSelectDog}>
+    //         {this.state.breeds.map(el => <option value={el}>{el}</option>)}
+    //       </select>
+    //       <button onClick={this.getSelectedDog}>This Pokemon!</button> <button>List National Dex</button>
+    //     </div>
+    //     <div>
+    //       <img style={styles.img} alt="" src={imgURL} />
+    //     </div>
+    //     <p>
+    //       <button onClick={this.getRandomImage}> one more! </button>
+    //     </p>
+    //   </div>
+    // )
   }
 }
 
-render(<BrowserRouter><Main /></BrowserRouter>, document.getElementById('root'));
+render(<App />, document.getElementById('root'));
