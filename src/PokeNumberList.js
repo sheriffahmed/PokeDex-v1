@@ -10,10 +10,12 @@ const nums = () => {
       {list.map(num => {
         return (
           <li>
-            <Link to={`/pokemon/number/${num}`}>{num}</Link>
+            <Link to={`/pokemon/number/${parseInt(num.split('').splice(0,3).join('')).valueOf()}`}>{num}</Link>
           </li>
         )
-      })}
+      }
+      
+      )}
     </ul>
   )
 
