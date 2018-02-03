@@ -1,9 +1,17 @@
 import React from 'react';
-import {Link} from 'react-router-dom'
+import {Link, Route, Switch} from 'react-router-dom'
 import PokeList from './pokeLists'
+import SinglePokemon from './singlePokemon';
 
 
-const names = () =>{
+const RenderSingle = props =>{
+  
+}
+
+class Names extends React.Component {
+
+
+ namelist = () =>{
   let list = PokeList.sortbyAlphabet
   return(
     <ul style={{listStyle: 'none'}}>
@@ -15,9 +23,25 @@ const names = () =>{
   )
   })}
   </ul>
-  )
+  )}
+  render(){
+    return(
+     <div>
+ 
+ <Switch>
+  <Route path={"/pokemon/name"} render={this.namelist}  />
+  <Route path='/pokemon/name/:pokemon'> </Route>
+
+  </Switch>
+  </div> 
+    )
+
+
+   }
+  
+  
   
 
 }
 
-export default names;
+export default Names;
