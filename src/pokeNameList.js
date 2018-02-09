@@ -12,14 +12,14 @@ class Names extends React.Component {
   render() {
     let list = PokeList.sortbyAlphabet;
     return (
-      <div>
+      <div style={{ paddingTop: "7vh" }}>
         <Link to="/pokemon/name">Sort by Pokemon Name</Link>{" "}
         <Link to="/pokemon/number">Sort by Pokemon Number</Link>
         <ul style={{ listStyle: "none" }}>
           {list.map(name => {
             return (
               <li>
-                <Link to={`/pokemon/name/${name}`}>{name}</Link>
+                <Link to={`/pokemon/name/${name}`} >{name}</Link>
               </li>
             );
           })}

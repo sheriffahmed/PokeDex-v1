@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
 import Hello from './Hello';
-import { BrowserRouter, Link, Switch, Route} from "react-router-dom";
-
+import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
+// import SinglePokemon from "./singlePokemon";
 import Main from "./Body";
 import Home from './Home'
 import Pokemon from "./pokePage"
@@ -15,31 +15,26 @@ const styles = {
   textAlign: 'center',
 };
 
-const Getparams = ({match}) =>{
+const getParams = ({ match }) => (
+  match
+)
+const SinglePokemon = ({ match, id, height, weight, abilities, sprites, stats, types, prev }) => {
+  console.log(JSON.stringify(match))
+  return (
 
- return (
-   <div>
-   <h1>{match.params.pokemon}</h1>
-   </div>
-   )
 
+    <div>
+      <h1>{match.params.pokemon}</h1>
+      <img src={sprites} alt={`loading ${match.params.pokemon}`} />
+      <Link to={`/${prev}`}>Back</Link>
+
+    </div>
+  )
 }
-const SinglePokemon = ({ name, id, height, weight, abilities, sprites, stats, types, prev }) =>{ 
-  // console.log(JSON.stringify(match))x
-  return(
 
-
-  <div>
-    <h1>{name}</h1>
-    <img src={sprites} alt={`loading ${name}`} />
-    <Link to={`/${prev}`}>Back</Link>
-
-  </div>
-)}
-
-class App extends React.PureComponent {
-  constructor(props) {
-    super(props);
+class App extends React.Component {
+  constructor() {
+    super();
     this.list = []
     this.state = {
       imgURL: "",
@@ -51,12 +46,43 @@ class App extends React.PureComponent {
   }
   renderPokename = () => {
     const { name } = props.match.params.pokemon;
-  
-    return console.log(`name is:`,name), <SinglePokemon  prev="pokemon/name" />;
+
+    return console.log(`name is:`, name), <SinglePokemon prev="pokemon/name" />;
   };
 
-  
- 
+
+  // getPokemonSelect = async () => {
+
+  //   for (var i = 1; i <= 8; i++) {
+  //     const response = await fetch('https://pokeapi.co/api/v2/pokemon/' + i + '/');
+  //     const json = await response.json();
+
+
+  //     // fetch(`http://pokeapi.co/api/v2/pokemon/4/`,{ method: 'GET',
+  //     //   mode: 'cors'})
+  //     // .then(response => {
+  //     console.log("response is: " + json)
+  //     // return response.json();
+
+
+  //     // })
+  //     // .then(obj =>{
+  //     this.list.push(json.name)
+
+  //     // })
+  //     // .catch(err => {
+  //     // console.log(err)
+  //     // })
+  //   }
+  //   this.setState({
+  //     breeds: this.list
+  //     // this.setState({
+  //     //   breeds: response.data.message
+  //     // })
+
+
+  //   })
+  // }
 
   getRandomImage = () => {
     axios
@@ -83,11 +109,15 @@ class App extends React.PureComponent {
         console.log(err);
       })
   }
-  handleProps = () =>{
-   this.setState({
-     pokemonParam: getParams
-   });
-   console.log('state',this.state.pokemonParam)
+  handleProps = () => {
+    this.setState({
+      pokemonParam: 
+   })
+  }
+  handlerSelectDog = e => {
+    this.setState({
+      selectDog: e.target.value
+    })
   }
 
   componentWillMount() {
@@ -111,7 +141,6 @@ class App extends React.PureComponent {
     this.getRandomImage();
     // this.getPokemonSelect();
     this.getSelectedDog();
-    
   }
 
   render() {
@@ -122,9 +151,9 @@ class App extends React.PureComponent {
         height: "15em"
       }
     }
-    // console.log(this.list)
-   
-    return(
+    console.log(this.list)
+
+    return (
       <BrowserRouter>
         <div>
           <nav>
@@ -139,20 +168,19 @@ class App extends React.PureComponent {
             <Route exact path="/pokemon" component={Pokemon} />
             <Route exact path="/pokemon/name" component={PokeNameList} />
             <Route path="/pokemon/number" render={PokeNumList} />
-            <Route path="/pokemon/name/:pokemon" render={(props)=>(<SinglePokemon name={props.match.params.pokemon} prev='pokemon/name' /> )} > <SinglePokemon  /></Route>
+            <Route path="/pokemon/name/:pokemon" render={SinglePokemon} ><SinglePokemon match={this.props.match} prev="pokemon/name" /></Route>
             <Route path="/pokemon/number/:pokemon" />
           </Switch>
         </div>
-      
+
       </BrowserRouter>
 
-      
+
     )
-    
     // return (
     //   <div>
     //     <p> PokeDex v1: <i>A casual guide to competitive Battling</i></p>
-        
+
     //     <br />
     //     <div>
     //     <input type="text" />

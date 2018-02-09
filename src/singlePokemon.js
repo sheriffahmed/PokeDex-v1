@@ -1,9 +1,9 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 
-const SinglePokemon = ({name, id, height, weight, abilities, sprites, stats, types, prev })=>{
+const SinglePokemon = ({ name, id, height, weight, abilities, sprites, stats, types, prev })=>(
 
-return(
+
   <div>
   <h1>{name}</h1>
   <img src={sprites} alt={`loading ${name}`}  />
@@ -11,6 +11,6 @@ return(
 
   </div>
 )
-}
+
 
 export default SinglePokemon;

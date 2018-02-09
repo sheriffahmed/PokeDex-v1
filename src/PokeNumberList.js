@@ -6,7 +6,7 @@ import PokeList from './pokeLists'
 const nums = () => {
   let list = PokeList.natDex
   return (
-    <div>
+    <div style={{ paddingTop: "7vh" }}>
       <Link to="/pokemon/name">Sort by Pokemon Name</Link>{" "}
       <Link to="/pokemon/number">Sort by Pokemon Number</Link>
     <ul style={{ listStyle: 'none' }}>
