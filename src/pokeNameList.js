@@ -9,23 +9,12 @@ const RenderSingle = props => {
 };
 
 class Names extends React.Component {
-  //  namelist = () => {
-  //   let list = PokeList.sortbyAlphabet
-  //   return(
-  //     <ul style={{listStyle: 'none'}}>
-  //   {list.map( name =>{
-  //     return(
-  //       <li>
-  //       <Link to={`/pokemon/name/${name}`}>{name}</Link>
-  //       </li>
-  //   )
-  //   })}
-  //   </ul>
-  //   )}
   render() {
     let list = PokeList.sortbyAlphabet;
     return (
       <div>
+        <Link to="/pokemon/name">Sort by Pokemon Name</Link>{" "}
+        <Link to="/pokemon/number">Sort by Pokemon Number</Link>
         <ul style={{ listStyle: "none" }}>
           {list.map(name => {
             return (
@@ -35,11 +24,7 @@ class Names extends React.Component {
             );
           })}
         </ul>
-        {/* <Switch>
-  <Route exact path={"/pokemon/name"} render={this.namelist}  />
-  <Route path='/pokemon/name/:pokemon' render={this.RenderSingle} />
 
-  </Switch> . */}
       </div>
     );
   }

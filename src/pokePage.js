@@ -9,12 +9,19 @@ class Pokemon extends React.Component {
     const { name } = props.match.params.pokemon;
     return <SinglePokemon name={name} prev="pokemon/name" />;
   };
+  renderPokeRoute= () =>{
+    return(
+      <div>
+        <Link to="/pokemon/name">Sort by Pokemon Name</Link>{" "}
+        <Link to="/pokemon/number">Sort by Pokemon Number</Link>
+        </div>
+    )
+  }
   render() {
     return (
       <div style={{ paddingTop: "7vh" }}>
-        <Link to="/pokemon/name">Sort by Pokemon Name</Link>{" "}
-        <Link to="/pokemon/number">Sort by Pokemon Number</Link>
         <Switch>
+          <Route exact path="/pokemon" render={this.renderPokeRoute} />
           <Route exact path="/pokemon/name" component={PokeNameList} />
           <Route path="/pokemon/number" render={PokeNumList} />
         <Route path="/pokemon/name/:pokemon" render={this.renderPokename} /> 
