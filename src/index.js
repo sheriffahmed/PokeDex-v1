@@ -2,6 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import Hello from './Hello';
 import { BrowserRouter, Link, Switch, Route} from "react-router-dom";
+import SinglePokemon from "./singlePokemon";
 import Main from "./Body";
 import Home from './Home'
 import Pokemon from "./pokePage"
@@ -23,7 +24,11 @@ class App extends React.Component {
       searchInput: ''
     }
   }
-
+  renderPokename = props => {
+    const { name } = props.match.params.pokemon;
+  
+    return console.log(`name is:`,name), <SinglePokemon name={name} prev="pokemon/name" />;
+  };
 
 
   // getPokemonSelect = async () => {
