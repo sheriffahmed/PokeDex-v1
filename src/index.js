@@ -130,17 +130,6 @@ class App extends React.PureComponent {
     console.log("state", this.state.pokemonParam);
   };
 
-  captureProps = incomingProps => {
-    this.setState({
-      pokemonParam: [incomingProps.match.params.pokemon]
-    });
-    return (
-      <SinglePokemon
-        name={incomingProps.match.params.pokemon}
-        prev="pokemon/name"
-      />
-    );
-  };
 
   componentWillMount() {
     // this.getPokemonSelect();
@@ -180,7 +169,7 @@ class App extends React.PureComponent {
               exact
               path="/pokemon/name"
               render={() => {
-                return <PokeNameList handler={this.pokeOnClick()} />;
+                return <PokeNameList handler={this.pokeOnClick} />;
               }}
             />
             <Route path="/pokemon/number" render={PokeNumList} />
