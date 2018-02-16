@@ -6,9 +6,30 @@ import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
 import Main from "./Body";
 import Home from "./Home";
 import Pokemon from "./pokePage";
-import PokeNameList from "./pokeNameList";
+// import PokeNameList from "./pokeNameList";
 import PokeNumList from "./PokeNumberList";
+import PokeList from "./pokeLists";
 const axios = require("axios");
+
+const PokeNameList = ({handler}) =>{
+  let list = PokeList.sortbyAlphabet;
+  return (
+    <div style={{ paddingTop: "7vh" }}>
+      <Link to="/pokemon/name">Sort by Pokemon Name</Link>{" "}
+      <Link to="/pokemon/number">Sort by Pokemon Number</Link>
+      <ul style={{ listStyle: "none" }}>
+        {list.map(name => {
+          return (
+            <li>
+              <Link to={`/pokemon/name/${name}`} id={`${name}`} onClick={handler}  >{name}</Link>
+            </li>
+          );
+        })}
+      </ul>
+
+    </div>
+  );
+}
 
 const styles = {
   fontFamily: "sans-serif",
@@ -38,6 +59,7 @@ const SinglePokemon = ({
     <div>
       <h1>{name}</h1>
       <img src={sprites} alt={`loading ${name}`} />
+      <p>Weight: {weight}</p>
       <Link to={`/${prev}`}>Back</Link>
     </div>
   );
@@ -55,12 +77,17 @@ class App extends React.PureComponent {
       pokemonParam: ""
     };
   }
-  // renderPokename = () => {
-  //   const { name } = props.match.params.pokemon;
+  renderPokename = () => {
+    const { name } = props.match.params.pokemon;
 
-  //   return console.log(`name is:`, name), <SinglePokemon prev="pokemon/name" />;
-  // };
-
+    return console.log(`name is:`, name), <SinglePokemon prev="pokemon/name" />;
+  };
+pokeOnClick = e =>{
+  this.setState({
+    pokemonParam: [e.target.id]
+  })
+  console.log(`POKE-STATE: `, this.state.pokemonParam);
+}
   getRandomImage = () => {
     axios
       .get("https://dog.ceo/api/breeds/image/random")
@@ -74,18 +101,7 @@ class App extends React.PureComponent {
       });
   };
 
-  getSelectedDog = () => {
-    axios
-      .get(`https://dog.ceo/api/breed/${this.state.selectDog}/images/random`)
-      .then(response => {
-        this.setState({
-          imgURL: response.data.message
-        });
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  };
+  
   handleProps = () => {
     if (this.state.po) {
     }
@@ -121,9 +137,9 @@ class App extends React.PureComponent {
   // };
 
   componentDidMount() {
-    this.getRandomImage();
+    // this.getRandomImage();
     // this.getPokemonSelect();
-    this.getSelectedDog();
+
   }
 
   render() {
@@ -149,11 +165,41 @@ class App extends React.PureComponent {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/pokemon" component={Pokemon} />
-            <Route exact path="/pokemon/name" component={PokeNameList} />
+            <Route exact path="/pokemon/name" render={() =>{
+              return(
+                <PokeNameList handler={this.pokeOnClick} />
+              )
+              }} />
             <Route path="/pokemon/number" render={PokeNumList} />
             <Route
               path="/pokemon/name/:pokemon"
-              render={props => {
+              render={async (props) => {
+                let pokemon = props.match.params.pokemon
+                const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.toLowerCase()}`);
+                const json =  await response.json()
+                const weight = Promise.resolve(json.weight)
+                const sprite = Promise.resolve(json.sprites.front_default)
+               console.log(json.name)
+
+              // async () => {
+                //  response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon.toLowerCase()}`);
+                //  json = await response.json();
+
+    // return (
+    //   <SinglePokemon
+    //     name={props.match.params.pokemon}
+    //     sprites={json.sprites.front_default}
+    //     weight={json.weight}
+    //     prev="pokemon/name"
+    //   />
+    // ); 
+  
+  
+ 
+                //  axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon.toLowerCase()}`)
+                // console.log(`API: `, api)
+                  
+              
                 // return(this.captureProps(props))
               //   // let {pokemonParam} = this.state
               //   // let pp = pokemonParam
@@ -166,8 +212,14 @@ class App extends React.PureComponent {
                 return (
                   <SinglePokemon
                     name={props.match.params.pokemon}
+                    sprites={sprite}
+                    weight={weight}
                     prev="pokemon/name"
                   />
+                  // <SinglePokemon
+                  //   name={props.match.params.pokemon}
+                  //   prev="pokemon/name"
+                  // />
                 ); 
               // >
               // {" "}
@@ -177,6 +229,7 @@ class App extends React.PureComponent {
             
             <Route path="/pokemon/number/:pokemon" />
           </Switch>
+
         </div>
       </BrowserRouter>
     );

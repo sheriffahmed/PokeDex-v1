@@ -7,8 +7,12 @@ const RenderSingle = props => {
   const { name } = props.match.params.pokemon;
   return <SinglePokemon name={name} prev="pokemon/name" />;
 };
+const getHandler = (handler) =>{
+
+}
 
 class Names extends React.Component {
+
   render() {
     let list = PokeList.sortbyAlphabet;
     return (
@@ -19,7 +23,7 @@ class Names extends React.Component {
           {list.map(name => {
             return (
               <li>
-                <Link to={`/pokemon/name/${name}`} id={`${name}`} >{name}</Link>
+                <Link to={`/pokemon/name/${name}`} id={`${name}`} onClick={getHandler}  >{name}</Link>
               </li>
             );
           })}
@@ -30,4 +34,7 @@ class Names extends React.Component {
   }
 }
 
-export default Names;
+export default {
+  Names,
+  getHandler
+  }
