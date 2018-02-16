@@ -64,15 +64,15 @@ const SinglePokemon = ({
     <div>
       <h1>{name}</h1>
       <img src={sprites} alt={`loading ${name}`} />
-      <p>Weight: {weight}</p>
+      <p>Weight: {weight ?  weight : 'loading...' }</p>
       <Link to={`/${prev}`}>Back</Link>
     </div>
   );
 };
 
 class App extends React.PureComponent {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.list = [];
     this.state = {
       imgURL: "",
@@ -87,7 +87,7 @@ class App extends React.PureComponent {
       .get("https://pokeapi.co/api/v2/pokemon/" + this.state.pokemonParam + "/")
       .then(res => {
         this.setState({
-          pokeWeight: res.data.weight
+          pokeWeight: [res.data.weight]
         });
       })
       .catch(err => {
@@ -106,9 +106,11 @@ class App extends React.PureComponent {
     
   };
   pokeOnClick = e => {
+    
     this.setState({
       pokemonParam: [e.target.id.toLowerCase()]
     });
+    this.renderPokename();
   }
   getRandomImage = () => {
     axios
@@ -134,11 +136,16 @@ class App extends React.PureComponent {
   componentWillMount() {
     // this.getPokemonSelect();
     // this.pokemonList();
+    this.renderPokename();
   }
 
   componentDidMount() {
     // this.getRandomImage();
     // this.getPokemonSelect();
+    
+  }
+  
+  componentWillReceiveProps(){
     this.renderPokename();
   }
 
