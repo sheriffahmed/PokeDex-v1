@@ -51,38 +51,38 @@ class App extends React.Component {
   };
 
 
-  // getPokemonSelect = async () => {
+  getPokemonSelect = async () => {
 
-  //   for (var i = 1; i <= 8; i++) {
-  //     const response = await fetch('https://pokeapi.co/api/v2/pokemon/' + i + '/');
-  //     const json = await response.json();
-
-
-  //     // fetch(`http://pokeapi.co/api/v2/pokemon/4/`,{ method: 'GET',
-  //     //   mode: 'cors'})
-  //     // .then(response => {
-  //     console.log("response is: " + json)
-  //     // return response.json();
+    for (var i = 1; i <= 8; i++) {
+      const response = await fetch('https://pokeapi.co/api/v2/pokemon/' + i + '/');
+      const json = await response.json();
 
 
-  //     // })
-  //     // .then(obj =>{
-  //     this.list.push(json.name)
-
-  //     // })
-  //     // .catch(err => {
-  //     // console.log(err)
-  //     // })
-  //   }
-  //   this.setState({
-  //     breeds: this.list
-  //     // this.setState({
-  //     //   breeds: response.data.message
-  //     // })
+      // fetch(`http://pokeapi.co/api/v2/pokemon/4/`,{ method: 'GET',
+      //   mode: 'cors'})
+      // .then(response => {
+      console.log("response is: " + json)
+      // return response.json();
 
 
-  //   })
-  // }
+      // })
+      // .then(obj =>{
+      this.list.push(json.name)
+
+      // })
+      // .catch(err => {
+      // console.log(err)
+      // })
+    }
+    this.setState({
+      breeds: this.list
+      // this.setState({
+      //   breeds: response.data.message
+      // })
+
+
+    })
+  }
 
   getRandomImage = () => {
     axios
