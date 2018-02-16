@@ -19,7 +19,7 @@ class Names extends React.Component {
           {list.map(name => {
             return (
               <li>
-                <Link to={`/pokemon/name/${name}`} >{name}</Link>
+                <Link to={`/pokemon/name/${name}`} id={`${name}`} >{name}</Link>
               </li>
             );
           })}

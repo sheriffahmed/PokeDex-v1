@@ -1,75 +1,78 @@
-import React from 'react';
-import { render } from 'react-dom';
-import Hello from './Hello';
-import { BrowserRouter, Link, Switch, Route} from "react-router-dom";
+import React from "react";
+import { render } from "react-dom";
+import Hello from "./Hello";
+import { BrowserRouter, Link, Switch, Route } from "react-router-dom";
 
 import Main from "./Body";
-import Home from './Home'
-import Pokemon from "./pokePage"
+import Home from "./Home";
+import Pokemon from "./pokePage";
 import PokeNameList from "./pokeNameList";
 import PokeNumList from "./PokeNumberList";
 const axios = require("axios");
 
 const styles = {
-  fontFamily: 'sans-serif',
-  textAlign: 'center',
+  fontFamily: "sans-serif",
+  textAlign: "center"
 };
 
-const Getparams = ({match}) =>{
-
- return (
-   <div>
-   <h1>{match.params.pokemon}</h1>
-   </div>
-   )
-
-}
-const SinglePokemon = ({ name, id, height, weight, abilities, sprites, stats, types, prev }) =>{ 
+const Getparams = ({ match }) => {
+  return (
+    <div>
+      <h1>{match.params.pokemon}</h1>
+    </div>
+  );
+};
+const SinglePokemon = ({
+  name,
+  id,
+  height,
+  weight,
+  abilities,
+  sprites,
+  stats,
+  types,
+  prev
+}) => {
   // console.log(JSON.stringify(match))x
-  return(
-
-
-  <div>
-    <h1>{name}</h1>
-    <img src={sprites} alt={`loading ${name}`} />
-    <Link to={`/${prev}`}>Back</Link>
-
-  </div>
-)}
+  return (
+    <div>
+      <h1>{name}</h1>
+      <img src={sprites} alt={`loading ${name}`} />
+      <Link to={`/${prev}`}>Back</Link>
+    </div>
+  );
+};
 
 class App extends React.PureComponent {
   constructor(props) {
     super(props);
-    this.list = []
+    this.list = [];
     this.state = {
       imgURL: "",
       selectDog: "",
       breeds: [],
-      searchInput: '',
-      pokemonParam: ''
-    }
+      searchInput: "",
+      pokemonParam: ""
+    };
   }
-  renderPokename = () => {
-    const { name } = props.match.params.pokemon;
-  
-    return console.log(`name is:`,name), <SinglePokemon  prev="pokemon/name" />;
-  };
+  // renderPokename = () => {
+  //   const { name } = props.match.params.pokemon;
 
-  
- 
+  //   return console.log(`name is:`, name), <SinglePokemon prev="pokemon/name" />;
+  // };
 
   getRandomImage = () => {
     axios
-      .get('https://dog.ceo/api/breeds/image/random')
+      .get("https://dog.ceo/api/breeds/image/random")
       .then(response => {
         this.setState({
           imgURL: response.data.message
-        })
+        });
       })
       .catch(err => {
-        console.log(err)
-      })
-  }
+        console.log(err);
+      });
+  };
 
   getSelectedDog = () => {
     axios
@@ -77,27 +80,37 @@ class App extends React.PureComponent {
       .then(response => {
         this.setState({
           imgURL: response.data.message
-        })
+        });
       })
       .catch(err => {
         console.log(err);
-      })
-  }
-  handleProps = () =>{
-   this.setState({
-     pokemonParam: getParams
-   });
-   console.log('state',this.state.pokemonParam)
+      });
+  };
+  handleProps = () => {
+    if (this.state.po) {
+    }
+
+    console.log("state", this.state.pokemonParam);
+  };
+
+  captureProps = (incomingProps) =>{
+
+    this.setState({
+      pokemonParam: [incomingProps.match.params.pokemon]
+    })
+    return(
+      <SinglePokemon
+        name={incomingProps.match.params.pokemon}
+        prev="pokemon/name"
+      />
+    )
   }
 
   componentWillMount() {
     // this.fetchData();
     // this.getPokemonSelect();
     // this.pokemonList();
-
-
   }
-
 
   // fetchData = async () => {
   //   const response = await fetch('https://pokeapi.co/api/v2/pokemon/2/');
@@ -111,48 +124,67 @@ class App extends React.PureComponent {
     this.getRandomImage();
     // this.getPokemonSelect();
     this.getSelectedDog();
-    
   }
 
   render() {
-    console.log(this.handleProps)
+    console.log(this.handleProps);
     const { imgURL } = this.state;
     const styles = {
       img: {
         height: "15em"
       }
-    }
+    };
     // console.log(this.list)
-   
-    return(
+
+    return (
       <BrowserRouter>
         <div>
           <nav>
             <Link to="/">Home</Link>
             {"  "}
             <Link to="/pokemon">Pokemon</Link>
-
-            {"  "}<input type="text" /> <button>Search PokeDex</button>
+            {"  "}
+            <input type="text" /> <button>Search PokeDex</button>
           </nav>
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/pokemon" component={Pokemon} />
             <Route exact path="/pokemon/name" component={PokeNameList} />
             <Route path="/pokemon/number" render={PokeNumList} />
-            <Route path="/pokemon/name/:pokemon" render={(props)=>(<SinglePokemon name={props.match.params.pokemon} prev='pokemon/name' /> )} > <SinglePokemon  /></Route>
+            <Route
+              path="/pokemon/name/:pokemon"
+              render={props => {
+                // return(this.captureProps(props))
+              //   // let {pokemonParam} = this.state
+              //   // let pp = pokemonParam
+              //   // if(pp === '' || pp !== props.match.params.pokemon){
+              //   //   this.setState({
+              //   //   pokemonParam: [props.match.params.pokemon]
+              //   // })
+              //   // }
+              //   // console.log(props.match.params.pokemon)
+                return (
+                  <SinglePokemon
+                    name={props.match.params.pokemon}
+                    prev="pokemon/name"
+                  />
+                ); 
+              // >
+              // {" "}
+              // <SinglePokemon /> 
+              }
+              } />
+            
             <Route path="/pokemon/number/:pokemon" />
           </Switch>
         </div>
-      
       </BrowserRouter>
+    );
 
-      
-    )
-    
     // return (
     //   <div>
     //     <p> PokeDex v1: <i>A casual guide to competitive Battling</i></p>
-        
+
     //     <br />
     //     <div>
     //     <input type="text" />
@@ -175,4 +207,4 @@ class App extends React.PureComponent {
   }
 }
 
-render(<App />, document.getElementById('root'));
+render(<App />, document.getElementById("root"));
