@@ -79,7 +79,7 @@ class App extends React.PureComponent {
 
             <Route path="/pokemon/number/:pokemon" />
             <Route exact path="/" component={Home} />
-            <Route path="/pokemon" component={Pokemon} />
+            <Route exact path="/pokemon" component={Pokemon} />
             <Route
               exact
               path="/pokemon/name"
